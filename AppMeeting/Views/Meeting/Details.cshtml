@@ -1,0 +1,23 @@
+﻿@model UserInfo
+
+@{
+    ViewData["Title"] = "Başvuru Detayı";
+}
+
+
+<main class="text-center">
+    <h1>Başvuru Detayı</h1>
+    <p>
+        @if (Model.WillAttend)
+        {
+            <span class="badge bg-primary">Katılıyor</span>
+        }
+        else
+        {
+            <span class="badge bg-danger">Katılmıyor</span>
+        }
+    </p>
+    <p>İsim : @Model.Name</p>
+    <p>Email : @Model.Email</p>
+    <p>Telefon : @Model.Phone</p>
+</main>
